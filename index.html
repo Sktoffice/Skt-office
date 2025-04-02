@@ -69,6 +69,21 @@
             <a href="https://twitter.com/sktoffice" target="_blank" class="text-blue-300">Twitter</a>
             <a href="https://youtube.com/@sktoffice" target="_blank" class="text-red-500">YouTube</a>
         </div>
-    </footer>
+    </footer> 
+    <script>
+document.getElementById("search").addEventListener("input", function() {
+    let searchQuery = this.value.toLowerCase();
+    let newsItems = document.querySelectorAll(".news-item");
+
+    newsItems.forEach(function(item) {
+        let text = item.innerText.toLowerCase();
+        if (text.includes(searchQuery)) {
+            item.style.display = "block";  // मैच होने पर दिखाएं
+        } else {
+            item.style.display = "none";   // मैच न होने पर छुपाएं
+        }
+    });
+});
+</script>
 </body>
 </html>
