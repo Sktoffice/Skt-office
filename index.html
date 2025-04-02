@@ -1,72 +1,106 @@
 <!DOCTYPE html>
 <html lang="hi">
-<head>
+<head> <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SKT News - आपकी अपनी न्यूज़ वेबसाइट</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <div <div class="container mx-auto p-4 bg-gray-800 text-white">
+    <h2 class="text-xl font-bold text-center">🔥 ताज़ा खबरें</h2>
+</div>
+    <input type="text" id="search" placeholder="खोजें..." class="p-2 border rounded w-full">
+</div>  
     <style>
-        body { font-family: Arial, sans-serif; background: #f5f5f5; }
-        .container { max-width: 1000px; margin: auto; padding: 20px; }
-        .news-item { background: white; padding: 15px; margin-bottom: 15px; border-radius: 5px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+        header { background: #333; color: white; padding: 15px; text-align: center; }
+        .container { width: 80%; margin: auto; padding: 20px; }
+        .news-category { margin-bottom: 30px; }
+        .news-item { background: white; padding: 15px; margin-bottom: 10px; border-radius: 5px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
+        iframe { width: 100%; height: 315px; border: none; }
+        footer { text-align: center; padding: 15px; background: #333; color: white; margin-top: 20px; }
     </style>
 </head>
 <body>
-
-<header class="bg-gray-800 text-white p-4 text-center">
-    <h1 class="text-2xl font-bold">SKT News - ताज़ा और सटीक खबरें</h1>
-    <input type="text" id="search" placeholder="खोजें..." class="p-2 mt-2 w-full max-w-md border rounded text-black">
-</header>
-
-<div class="container">
-    <h2 class="text-xl font-semibold mt-4">🔥 ताज़ा खबरें</h2>
-    <div id="news-list">
-        <div class="news-item">
-            <h3 class="text-lg font-bold">🏏 भारत ने जीता बड़ा मैच!</h3>
+    <header> class="container mx-auto p-4">
+    <h2 class="text-xl font-bold mb-4">🔥 ताज़ा खबरें</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-white shadow-md p-4 rounded-lg">
+            <h3 class="text-lg font-semibold">🏏 भारत ने जीता बड़ा मैच!</h3>
+             <a href="ipl-winners.html" class="text-blue-600 hover:underline">🏏 IPL विजेताओं की पूरी सूची देखें</a>
             <p>भारत ने शानदार प्रदर्शन करते हुए XYZ टीम को हराया।</p>
-            <a href="news1.html" class="text-blue-600 hover:underline">पूरा पढ़ें</a>
-        </div>
-        <div class="news-item">
-            <h3 class="text-lg font-bold">🚀 नया सरकारी योजना अपडेट!</h3>
-            <p>सरकार ने महिलाओं के लिए नई योजना लॉन्च की, जानिए कैसे मिलेगा लाभ!</p>
-            <a href="news2.html" class="text-blue-600 hover:underline">पूरा पढ़ें</a>
-        </div>
-        <div class="news-item">
-            <h3 class="text-lg font-bold">🎬 फिल्म का धमाका</h3>
+        </div> 
+        <div class="bg-white shadow-md p-4 rounded-lg">
+    <h3 class="text-lg font-semibold">🚀 नया सरकारी योजना अपडेट!</h3>
+    <p>सरकार ने महिलाओं के लिए नई योजना लॉन्च की, जानिए कैसे मिलेगा लाभ!</p>
+</div>
+<div class="bg-white shadow-md p-4 rounded-lg">
+    <img src="images/govt-scheme.jpg" alt="सरकारी योजना" class="w-full rounded-md mb-2">
+    <h3 class="text-lg font-semibold">📰 सरकारी योजना अपडेट</h3>
+    <p>सरकार की नई योजना से 10 लाख लोगों को लाभ मिलेगा!</p>
+</div>
+
+        <div class="bg-white shadow-md p-4 rounded-lg">
+            <h3 class="text-lg font-semibold">🎬 फिल्म का धमाका</h3>
             <p>नयी फिल्म ने बॉक्स ऑफिस पर रिकॉर्ड तोड़ दिया!</p>
-            <a href="news3.html" class="text-blue-600 hover:underline">पूरा पढ़ें</a>
+        </div>
+        <div class="bg-white shadow-md p-4 rounded-lg">
+            <h3 class="text-lg font-semibold">⚡ वायरल वीडियो</h3>
+            <p>सोशल मीडिया पर ये वीडियो तेजी से वायरल हो रहा है!</p>
         </div>
     </div>
-</div>
-
-<div class="container">
-    <h2 class="text-xl font-semibold mt-4">🎥 लेटेस्ट वीडियो</h2>
-    <iframe class="w-full h-64" src="https://www.youtube.com/embed/lPaFqTYf11E" allowfullscreen></iframe>
-</div>
-
-<footer class="text-center bg-gray-800 text-white p-4 mt-4">
-    <p>&copy; 2025 SKT News. सभी अधिकार सुरक्षित।</p>
-    <div class="flex space-x-4 justify-center mt-4">
-        <a href="https://facebook.com/sktoffice" target="_blank" class="text-blue-600">Facebook</a>
-        <a href="https://twitter.com/sktoffice" target="_blank" class="text-blue-400">Twitter</a>
-        <a href="https://youtube.com/@sktoffice" target="_blank" class="text-red-600">YouTube</a>
+</section>
+        <h1>SKT News</h1>
+        <p>खेल, सरकारी योजनाएँ, वायरल वीडियो, मनोरंजन – सब कुछ यहाँ</p>
+    </header>
+    
+    <div class="container">
+        <h2>लेटेस्ट वीडियो</h2>
+        <iframe src="https://www.youtube.com/embed/lPaFqTYf11E" allowfullscreen></iframe>
+        
+        <div class="news-category">
+            <h2>🏏 खेल (Sports)</h2>
+            <div class="news-item">
+                <h3>भारत ने जीता बड़ा मैच!</h3>
+                <p>भारत ने शानदार प्रदर्शन करते हुए XYZ टीम को हराया।</p>
+            </div>
+        </div>
+        
+        <div class="news-category">
+            <h2>🏛 सरकारी योजनाएँ (Govt. Schemes)</h2>
+            <div class="news-item">
+                <h3>नई योजना से महिलाओं को मिलेगा फायदा</h3>
+                <p>सरकार ने XYZ योजना की शुरुआत की, जिससे लाखों लोगों को लाभ मिलेगा।</p>
+            </div>
+        </div>
+        
+        <div class="news-category">
+            <h2>🔥 वायरल वीडियो (Viral Videos)</h2>
+            <div class="news-item">
+                <h3>इंटरनेट पर छाया यह मज़ेदार वीडियो</h3>
+                <p>देखें यह अनोखा वीडियो जो सोशल मीडिया पर धमाल मचा रहा है।</p>
+            </div>
+        </div>
+        
+        <div class="news-category">
+            <h2>🎬 मनोरंजन (Entertainment)</h2>
+            <div class="news-item">
+                <h3>बॉलीवुड स्टार की नई फिल्म का ट्रेलर लॉन्च</h3>
+                <p>फिल्म XYZ का ट्रेलर रिलीज़ होते ही दर्शकों में उत्साह।</p>
+            </div>
+        </div>
     </div>
-</footer>
-
-<script>
-document.getElementById("search").addEventListener("input", function() {
-    let searchQuery = this.value.toLowerCase();
-    let newsItems = document.querySelectorAll(".news-item");
-    newsItems.forEach(function(item) {
-        let text = item.innerText.toLowerCase();
-        if (text.includes(searchQuery)) {
-            item.style.display = "block";
-        } else {
-            item.style.display = "none";
-        }
-    });
-});
-</script>
+    <div class="bg-white shadow-md p-4 rounded-lg">
+    <img src=https://img.etimg.com/thumb/msid-118305536,width-650,height-488,imgsize-60374,resizemode-75/maha-kumbh-viral-sensation-monalisa.jpg alt="मोनालिसा" class="w-full rounded-md mb-2">
+    <h3 class="text-lg font-semibold">🖼️ मोनालिसा की मुस्कान का रहस्य!</h3>
+    <p>क्या आपको पता है कि मोनालिसा की पेंटिंग का रहस्य वैज्ञानिक भी नहीं सुलझा पाए? जानिए पूरी कहानी...</p>
+    <a href="monalisa-news.html" class="text-blue-600 hover:underline">पूरा पढ़ें</a>
+</div>
+    <footer>
+        <p>&copy; 2025 SKT News. सभी अधिकार सुरक्षित।</p>
+    </footer> <div class="flex space-x-4 justify-center mt-4">
+    <a href="https://facebook.com/sktoffice" target="_blank" class="text-blue-600">Facebook</a>
+    <a href="https://twitter.com/sktoffice" target="_blank" class="text-blue-400">Twitter</a>
+    <a href="https://youtube.com/@sktoffice" target="_blank" class="text-red-600">YouTube</a>
+</div>
 
 </body>
 </html>
