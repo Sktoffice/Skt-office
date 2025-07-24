@@ -32,10 +32,26 @@
             margin-right: 15px;
             border-radius: 5px;
         }
+        .animate-marquee {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
     </style>
 </head>
 <body>
-
+<!-- 🔁 यूट्यूब चैनल स्कीम वीडियो के लिए Auto-Scrolling पट्टी -->
+<div class="bg-yellow-100 text-black py-2 overflow-hidden relative">
+  <div class="animate-marquee whitespace-nowrap text-center font-semibold text-sm sm:text-base">
+    🎥 हमारा यूट्यूब चैनल "SKT Office" अब सरकारी योजनाओं पर 100 Shorts Videos बना रहा है! हर दिन एक नई योजना की पूरी जानकारी आसान भाषा में! अभी विज़िट करें और सब्सक्राइब करें 🙌
+  </div>
+</div>
     <div class="breaking-bar">
         <div class="breaking-title">BREAKING NEWS</div>
         भारत-ब्रिटेन के बीच फ्री ट्रेड एग्रीमेंट, पीयूष गोयल-जोनाथन ने साइन किए
