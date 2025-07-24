@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="hi">
-<head>
+<head> <div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>मोनालिसा की रहस्यमयी मुस्कान</title>
