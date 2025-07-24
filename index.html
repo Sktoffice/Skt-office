@@ -84,7 +84,7 @@
             <h2>🏏 खेल (Sports)</h2>
             <div class="news-item">
                 <h3>भारत ने जीता बड़ा मैच!</h3>
-                <p>भारत ने शानदार प्रदर्शन करके XYZ टीम को हराया।</p>
+                <p>भारत ने शानदार प्रदर्शन करके पाकिस्तान टीम को हराया।</p>
             </div>
         </div>
 
@@ -133,6 +133,32 @@
             <a href="https://youtube.com/@sktoffice" target="_blank" class="text-red-600">YouTube</a>
         </div>
     </footer>
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" class="fixed bottom-6 right-6 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-red-700 hidden">
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
+<!-- Scroll Script -->
+<script>
+  const scrollBtn = document.getElementById("scrollToTopBtn");
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollBtn.style.display = "flex";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+
+  scrollBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 
 </body>
 </html>
