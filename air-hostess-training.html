@@ -12,6 +12,28 @@
       padding: 0;
       background: #f2f2f2;
     }
+
+    .top-red-bar {
+      background-color: red;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    .top-black-bar {
+      background-color: black;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    .top-black-bar a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .top-black-bar a:last-child {
+      color: yellow;
+    }
+
     header {
       background: #1f3c88;
       color: white;
@@ -63,43 +85,21 @@
       border-radius: 6px;
       cursor: pointer;
     }
-    .top-red-bar {
-      background-color: red;
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
-    .top-black-bar {
-      background-color: black;
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
-    .top-black-bar a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    .top-black-bar a:last-child {
-      color: yellow;
-    }
   </style>
 </head>
 <body>
 
-  <!-- लाल पट्टी -->
-  <div class="top-red-bar">
-    <h2>📢 Welcome to SKT Office - सरकारी योजनाओं की जानकारी सबसे पहले</h2>
-  </div>
+  <!-- Header Placeholder -->
+  <div id="header"></div>
 
-  <!-- काली पट्टी -->
-  <div class="top-black-bar">
-    <a href="index.html">🏠 Home</a>
-    <a href="ipl-winners.html">🏆 IPL Winners</a>
-    <a href="air-hostess-training.html">✈️ Air Hostess</a>
-    <a href="monalisa-news.html">📰 Monalisa News</a>
-    <a href="https://www.youtube.com/playlist?list=PLv8agrAu5UTYMoVyrAmq6Xyq6_RILQE7Q" target="_blank">📺 Govt Yojana Shorts</a>
-  </div>
+  <!-- Header Loader Script -->
+  <script>
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+  </script>
 
   <header>
     <h1>Air Hostess Training</h1>
