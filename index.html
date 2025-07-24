@@ -1,93 +1,92 @@
 <!DOCTYPE html>
 <html lang="hi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SKT News - आपकी अपनी न्यूज़ वेबसाइट</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
-    header { background: #333; color: white; padding: 15px; text-align: center; }
-    .container { width: 80%; margin: auto; padding: 20px; }
-    .news-category { margin-bottom: 30px; }
-    .news-item { background: white; padding: 15px; margin-bottom: 10px; border-radius: 5px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
-    iframe { width: 100%; height: 315px; border: none; }
-    footer { text-align: center; padding: 15px; background: #333; color: white; margin-top: 20px; }
+<head> <!-- Header Placeholder -->
+<div id="header-placeholder"></div>
 
-    .breaking-bar {
-      background-color: red;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      font-family: Arial, sans-serif;
-    }
+<!-- Script to load header.html -->
+<script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKT News - आपकी अपनी न्यूज़ वेबसाइट</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+        header { background: #333; color: white; padding: 15px; text-align: center; }
+        .container { width: 80%; margin: auto; padding: 20px; }
+        .news-category { margin-bottom: 30px; }
+        .news-item { background: white; padding: 15px; margin-bottom: 10px; border-radius: 5px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
+        iframe { width: 100%; height: 315px; border: none; }
+        footer { text-align: center; padding: 15px; background: #333; color: white; margin-top: 20px; }
+        .breaking-bar {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            font-family: Arial, sans-serif;
+        }
 
-    .breaking-title {
-      background-color: white;
-      color: red;
-      padding: 5px 10px;
-      margin-right: 15px;
-      border-radius: 5px;
-    }
+        .breaking-title {
+            background-color: white;
+            color: red;
+            padding: 5px 10px;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+        .animate-marquee {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 20s linear infinite;
+}
 
-    .animate-marquee {
-      display: inline-block;
-      padding-left: 100%;
-      animation: marquee 20s linear infinite;
-    }
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
 
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
-  </style>
+    </style>
 </head>
-
-<body>
-
-  <!-- ✅ Header Placeholder -->
-  <div id="header"></div>
-
-  <!-- 🔁 Auto-Scrolling Marquee -->
-  <div class="bg-yellow-100 text-black py-2 overflow-hidden relative">
-    <div class="animate-marquee whitespace-nowrap text-center font-semibold text-sm sm:text-base">
-      🎥 हमारा यूट्यूब चैनल "SKT Office" अब सरकारी योजनाओं पर 100 Shorts Videos बना रहा है! हर दिन एक नई योजना की पूरी जानकारी आसान भाषा में! अभी विज़िट करें और सब्सक्राइब करें 🙌
+<body> <div id="header"></div>
+<!-- 🔁 यूट्यूब चैनल स्कीम वीडियो के लिए Auto-Scrolling पट्टी -->
+<div class="bg-yellow-100 text-black py-2 overflow-hidden relative">
+  <div class="animate-marquee whitespace-nowrap text-center font-semibold text-sm sm:text-base">
+    🎥 हमारा यूट्यूब चैनल "SKT Office" अब सरकारी योजनाओं पर 100 Shorts Videos बना रहा है! हर दिन एक नई योजना की पूरी जानकारी आसान भाषा में! अभी विज़िट करें और सब्सक्राइब करें 🙌
+  </div>
+</div>
+    <div class="breaking-bar">
+        <div class="breaking-title">BREAKING NEWS</div>
+        भारत-ब्रिटेन के बीच फ्री ट्रेड एग्रीमेंट, पीयूष गोयल-जोनाथन ने साइन किए
     </div>
-  </div>
 
-  <!-- 🔴 Breaking News Bar -->
-  <div class="breaking-bar">
-    <div class="breaking-title">BREAKING NEWS</div>
-    भारत-ब्रिटेन के बीच फ्री ट्रेड एग्रीमेंट, पीयूष गोयल-जोनाथन ने साइन किए
-  </div>
+    <header>
+        <h2 class="text-xl font-bold">🔥 ताज़ा खबरें</h2>
+    </header>
 
-  <!-- 📰 ताज़ा खबरें -->
-  <header>
-    <h2 class="text-xl font-bold">🔥 ताज़ा खबरें</h2>
-  </header>
-
-  <div class="container">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-      <div class="bg-white shadow-md p-4 rounded-lg">
-        <h3 class="text-lg font-semibold">🏏 भारत ने जीता बड़ा मैच!</h3>
-        <a href="ipl-winners.html" class="text-blue-600 hover:underline">🏏 IPL विजेताओं की पूरी सूची देखें</a>
-        <p>भारत ने शानदार प्रदर्शन करते हुए पाकिस्तान टीम को हराया।</p>
-      </div>
-
-      <div class="bg-white shadow-md p-4 rounded-lg">
-        <h3 class="text-lg font-semibold">🚀 नया सरकारी योजना अपडेट!</h3>
-        <p>सरकार ने महिलाओं के लिए नई योजना लॉंच की, जानिए कैसे मिलेगा लाभ!</p>
-      </div>
-
-      <div class="bg-white shadow-md p-4 rounded-lg">
-        <img src="images/govt-scheme.jpg" alt="सरकारी योजना" class="w-full rounded-md mb-2">
-        <h3 class="text-lg font-semibold">📰 सरकारी योजना अपडेट</h3>
-        <p>सरकार की नई योजना से 10 लाख लोगों को लाभ मिलेगा!</p>
-      </div>
+    <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+            <div class="bg-white shadow-md p-4 rounded-lg">
+                <h3 class="text-lg font-semibold">🏏 भारत ने जीता बड़ा मैच!</h3>
+                <a href="ipl-winners.html" class="text-blue-600 hover:underline">🏏 IPL विजेताओं की पूरी सूची देखें</a>
+                <p>भारत ने शानदार प्रदर्शन करते हुए पाकिस्तान टीम को हराया।</p>
+            </div> 
+            <div class="bg-white shadow-md p-4 rounded-lg">
+                <h3 class="text-lg font-semibold">🚀 नया सरकारी योजना अपडेट!</h3>
+                <p>सरकार ने महिलाओं के लिए नई योजना लॉंच की, जानिए कैसे मिलेगा लाभ!</p>
+            </div>
+            <div class="bg-white shadow-md p-4 rounded-lg">
+                <img src="images/govt-scheme.jpg" alt="सरकारी योजना" class="w-full rounded-md mb-2">
+                <h3 class="text-lg font-semibold">📰 सरकारी योजना अपडेट</h3>
+                <p>सरकार की नई योजना से 10 लाख लोगों को लाभ मिलेगा!</p>
+            </div>
             <div class="bg-white shadow-md p-4 rounded-lg">
                 <h3 class="text-lg font-semibold">🎬 फिल्म का धमाका</h3>
                 <p>नयी फिल्म ने बॉक्स ऑफिस पर रिकॉर्ड तोड़ दिया!</p>
@@ -229,4 +228,4 @@
 </script>
 
 </body>
-</html>
+</html> 
