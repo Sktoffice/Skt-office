@@ -45,7 +45,7 @@
 
     </style>
 </head>
-<body>
+<body> <div id="header"></div>
 <!-- 🔁 यूट्यूब चैनल स्कीम वीडियो के लिए Auto-Scrolling पट्टी -->
 <div class="bg-yellow-100 text-black py-2 overflow-hidden relative">
   <div class="animate-marquee whitespace-nowrap text-center font-semibold text-sm sm:text-base">
@@ -191,6 +191,30 @@
       behavior: "smooth"
     });
   });
+</script>
+<script>
+  // Scroll to top button logic
+  const scrollBtn = document.getElementById("scrollToTopBtn");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollBtn.style.display = "flex";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+  scrollBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+  // 🔺 Header file include logic (यह missing था)
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
 </script>
 
 </body>
