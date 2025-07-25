@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head> <!-- Header Placeholder -->
-
-<!-- Script to load header.html -->
-<script>
-  fetch("header.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("header-placeholder").innerHTML = data;
-    });
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SKT News - आपकी अपनी न्यूज़ वेबसाइट</title>
@@ -55,7 +46,6 @@
     </style>
 </head>  
 <body> <div id="header"></div> 
-  <div id="header-placeholder"></div>
 <!-- 🔁 यूट्यूब चैनल स्कीम वीडियो के लिए Auto-Scrolling पट्टी -->
 <div class="bg-yellow-100 text-black py-2 overflow-hidden relative">
   <div class="animate-marquee whitespace-nowrap text-center font-semibold text-sm sm:text-base">
@@ -154,13 +144,13 @@
                 <p>फिल्म XYZ का ट्रेलर रिलीज़ औते ही दर्शकों में उत्साह।</p>
             </div>
         </div>
-
+<ul>
         <li>
             <a href="air-hostess-training.html" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
                 ✈️ Air Hostess Training
             </a>
         </li>
-
+</ul>
         <div class="bg-white shadow-md p-4 rounded-lg mt-6">
             <img src="https://img.etimg.com/thumb/msid-118305536,width-650,height-488,imgsize-60374,resizemode-75/maha-kumbh-viral-sensation-monalisa.jpg" alt="मोनालिसा" class="w-full rounded-md mb-2">
             <h3 class="text-lg font-semibold">🔼 मोनालिसा की मुस्कान का रहस्य!</h3>
@@ -203,22 +193,6 @@
   });
 </script>
 <script>
-  // Scroll to top button logic
-  const scrollBtn = document.getElementById("scrollToTopBtn");
-  window.onscroll = function () {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      scrollBtn.style.display = "flex";
-    } else {
-      scrollBtn.style.display = "none";
-    }
-  };
-  scrollBtn.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-
   // 🔺 Header file include logic (यह missing था)
   fetch("header.html")
     .then(response => response.text())
